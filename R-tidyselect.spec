@@ -4,25 +4,26 @@
 #
 Name     : R-tidyselect
 Version  : 0.2.5
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/tidyselect_0.2.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyselect_0.2.5.tar.gz
-Summary  : Select from a Set of Strings
+Summary  : A backend for the selecting functions of the 'tidyverse'.
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-tidyselect-lib
-Requires: R-Rcpp
-Requires: R-dplyr
-Requires: R-purrr
+Requires: R-tidyselect-lib = %{version}-%{release}
+Requires: R-cli
 BuildRequires : R-Rcpp
+BuildRequires : R-cli
 BuildRequires : R-dplyr
 BuildRequires : R-purrr
 BuildRequires : buildreq-R
 
 %description
-It makes it easy to implement select-like functions in your own
-    packages in a way that is consistent with other 'tidyverse'
-    interfaces for selection.
+# tidyselect
+## Overview
+The tidyselect package is the backend of functions like `dplyr::select()`
+or `dplyr::pull()` as well as several tidyr verbs. It allows you to
+create selecting verbs that are consistent with other tidyverse packages.
 
 %package lib
 Summary: lib components for the R-tidyselect package.
@@ -40,11 +41,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539274894
+export SOURCE_DATE_EPOCH=1552844509
 
 %install
+export SOURCE_DATE_EPOCH=1552844509
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1539274894
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -79,8 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library tidyselect|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  tidyselect || :
 
 
 %files
@@ -105,10 +105,14 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/tidyselect/help/tidyselect.rdx
 /usr/lib64/R/library/tidyselect/html/00Index.html
 /usr/lib64/R/library/tidyselect/html/R.css
-/usr/lib64/R/library/tidyselect/libs/symbols.rds
+/usr/lib64/R/library/tidyselect/tests/testthat.R
+/usr/lib64/R/library/tidyselect/tests/testthat/test-inds-combine.R
+/usr/lib64/R/library/tidyselect/tests/testthat/test-select-helpers.R
+/usr/lib64/R/library/tidyselect/tests/testthat/test-vars-pull.R
+/usr/lib64/R/library/tidyselect/tests/testthat/test-vars-rename.R
+/usr/lib64/R/library/tidyselect/tests/testthat/test-vars-select.R
+/usr/lib64/R/library/tidyselect/tests/testthat/test-vars.R
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/tidyselect/libs/tidyselect.so
-/usr/lib64/R/library/tidyselect/libs/tidyselect.so.avx2
-/usr/lib64/R/library/tidyselect/libs/tidyselect.so.avx512
