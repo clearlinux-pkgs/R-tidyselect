@@ -4,18 +4,19 @@
 #
 Name     : R-tidyselect
 Version  : 0.2.5
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/tidyselect_0.2.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyselect_0.2.5.tar.gz
 Summary  : A backend for the selecting functions of the 'tidyverse'.
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-tidyselect-lib = %{version}-%{release}
-Requires: R-cli
+Requires: R-rlang
 BuildRequires : R-Rcpp
 BuildRequires : R-cli
 BuildRequires : R-dplyr
 BuildRequires : R-purrr
+BuildRequires : R-rlang
 BuildRequires : buildreq-R
 
 %description
@@ -41,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552844509
+export SOURCE_DATE_EPOCH=1552849715
 
 %install
-export SOURCE_DATE_EPOCH=1552844509
+export SOURCE_DATE_EPOCH=1552849715
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
