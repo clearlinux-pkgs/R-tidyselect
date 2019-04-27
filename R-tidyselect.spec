@@ -4,7 +4,7 @@
 #
 Name     : R-tidyselect
 Version  : 0.2.5
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/tidyselect_0.2.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyselect_0.2.5.tar.gz
 Summary  : A backend for the selecting functions of the 'tidyverse'.
