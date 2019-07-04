@@ -1,5 +1,18 @@
 # This file contains recursive sources that require this package
+R-AmesHousing
+R-adephylo
+R-bayesplot
+R-brms
 R-dbplyr
 R-dplyr
+R-dtplyr
+R-ggvis
+R-htmlTable
+R-modelr
+R-phylobase
+R-recipes
+R-shinystan
+R-styler
 R-tfruns
 R-tidyr
+R-tidyverse
