@@ -4,6 +4,7 @@ R-dbplyr
 R-dplyr
 R-dtplyr
 R-haven
+R-janitor
 R-modelr
 R-recipes
 R-rsample
