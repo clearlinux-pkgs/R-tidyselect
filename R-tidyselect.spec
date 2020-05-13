@@ -4,25 +4,21 @@
 #
 Name     : R-tidyselect
 Version  : 1.1.0
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/tidyselect_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyselect_1.1.0.tar.gz
 Summary  : Select from a Set of Strings
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-dplyr
 Requires: R-ellipsis
 Requires: R-glue
 Requires: R-purrr
 Requires: R-rlang
-Requires: R-tibble
 Requires: R-vctrs
-BuildRequires : R-dplyr
 BuildRequires : R-ellipsis
 BuildRequires : R-glue
 BuildRequires : R-purrr
 BuildRequires : R-rlang
-BuildRequires : R-tibble
 BuildRequires : R-vctrs
 BuildRequires : buildreq-R
 
@@ -40,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589310416
+export SOURCE_DATE_EPOCH=1589407923
 
 %install
-export SOURCE_DATE_EPOCH=1589310416
+export SOURCE_DATE_EPOCH=1589407923
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
