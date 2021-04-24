@@ -4,7 +4,7 @@
 #
 Name     : R-tidyselect
 Version  : 1.1.0
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/tidyselect_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyselect_1.1.0.tar.gz
 Summary  : Select from a Set of Strings
