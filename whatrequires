@@ -1,14 +1,18 @@
 # This file contains recursive sources that require this package
 R-bayesplot
+R-cards
 R-dbplyr
 R-dplyr
 R-dtplyr
 R-flexsurv
 R-haven
 R-janitor
+R-labelled
 R-modelr
 R-recipes
 R-rsample
+R-rstatix
 R-tfruns
 R-tidyr
+R-tidytable
 R-vroom
